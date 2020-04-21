@@ -28,7 +28,18 @@ class AddTripViewController: UIViewController {
   }
   
   @IBAction func save(_ sender: UIButton) {
-    TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!))
+    tripTextField.rightViewMode = .never
+    
+    guard tripTextField.text != "", let newTripName = tripTextField.text else {
+      tripTextField.layer.borderColor = UIColor.red.cgColor
+      tripTextField.layer.borderWidth = 1
+      tripTextField.layer.cornerRadius = 5
+      tripTextField.placeholder = "Required Field"
+      
+      tripTextField.rightViewMode = .always
+      return
+    }
+    TripFunctions.createTrip(tripModel: TripModel(title: newTripName))
     
     if let doneSaving = doneSaving {
       doneSaving()
