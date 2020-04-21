@@ -124,8 +124,8 @@
 		189DEDCD244F373900791165 /* TripsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				189DEDCE244F378800791165 /* TripsViewController.swift */,
 				189DEDD0244F37AF00791165 /* TripsViewController.storyboard */,
+				189DEDCE244F378800791165 /* TripsViewController.swift */,
 				189DEDD2244F4DE800791165 /* TripsTableViewCell.swift */,
 			);
 			path = TripsViewController;

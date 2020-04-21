@@ -27,6 +27,15 @@ class TripsViewController: UIViewController {
     view.backgroundColor = Theme.background
     addButton.createFloatingActionButton()
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toAddTripSegue" {
+      let popup = segue.destination as! AddTripViewController
+      popup.doneSaving = {
+        self.tableView.reloadData()
+      }
+    }
+  }
 }
 
 extension TripsViewController: UITableViewDataSource, UITableViewDelegate {

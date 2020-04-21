@@ -59,7 +59,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="plus" catalog="system"/>
                                 <connections>
-                                    <segue destination="3S8-IC-5QR" kind="presentation" identifier="toAddTripSegue" id="uxg-ow-B2v"/>
+                                    <segue destination="kHe-cG-lg3" kind="presentation" id="uxg-ow-B2v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,11 +75,18 @@
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="125.89285714285714"/>
         </scene>
-        <!--AddTripViewController-->
-        <scene sceneID="sKI-tI-XG5">
+        <!--View Controller-->
+        <scene sceneID="NOu-TG-SmB">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddTripViewController" id="3S8-IC-5QR" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GxN-65-J25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="kHe-cG-lg3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iwW-W8-mb5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.39680543664383561" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="95i-dl-qfh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOw-r6-swf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="906" y="126"/>
         </scene>
