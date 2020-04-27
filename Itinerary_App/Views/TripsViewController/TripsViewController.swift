@@ -55,6 +55,15 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 160
   }
+  
+  func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let delete = UIContextualAction(style: .destructive, title: "Delete") { _, _, complete in
+      TripFunctions.deleteTrip(index: indexPath.row)
+      tableView.deleteRows(at: [indexPath], with: .automatic)
+      complete(true)
+    }
+    return UISwipeActionsConfiguration(actions: [delete])
+  }
 }
 
 
