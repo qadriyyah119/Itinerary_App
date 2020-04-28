@@ -16,11 +16,18 @@ class AddTripViewController: UIViewController {
   @IBOutlet weak var saveButton: UIButton!
   
   var doneSaving: (() -> ())?
+  var tripIndexToEdit: Int?
   
     override func viewDidLoad() {
         super.viewDidLoad()
         
       titleLabel.font = UIFont(name: Theme.mainFontName, size: 24)
+      
+      if let index = tripIndexToEdit {
+        let trip = Data.tripModels[index]
+        tripTextField.text = trip.title
+        //imageView.image = trip.image - need to add photo feature. Video #16
+      }
     }
   
   @IBAction func cancel(_ sender: UIButton) {
@@ -39,8 +46,11 @@ class AddTripViewController: UIViewController {
       tripTextField.rightViewMode = .always
       return
     }
-    TripFunctions.createTrip(tripModel: TripModel(title: newTripName))
-    
+    if let index = tripIndexToEdit {
+      TripFunctions.updateTrip(at: index, title: newTripName)
+    } else {
+      TripFunctions.createTrip(tripModel: TripModel(title: newTripName))
+    }
     if let doneSaving = doneSaving {
       doneSaving()
     }
