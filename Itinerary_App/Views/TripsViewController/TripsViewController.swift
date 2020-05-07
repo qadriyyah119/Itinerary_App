@@ -59,6 +59,7 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     return 160
   }
   
+  //Swipe to Delete
   func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     
     let trip = Data.tripModels[indexPath.row]
@@ -83,6 +84,7 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     return UISwipeActionsConfiguration(actions: [delete])
   }
   
+  //Swipe to Edit
   func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     
     let edit = UIContextualAction(style: .normal, title: "Edit") { _, _, complete in
