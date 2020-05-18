@@ -30,8 +30,9 @@ class TripFunctions {
     
   }
   
-  static func updateTrip(at index: Int, title: String) {
+  static func updateTrip(at index: Int, title: String, image: UIImage?) {
     Data.tripModels[index].title = title
+    Data.tripModels[index].image = image
     
   }
   
