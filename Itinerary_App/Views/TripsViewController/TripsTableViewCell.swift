@@ -28,7 +28,16 @@ class TripsTableViewCell: UITableViewCell {
   
   func setup(tripModel: TripModel) {
     titleLabel.text = tripModel.title
-    tripImageView.image = tripModel.image
+    
+    //sets a slight animation to the image when it loads
+    if let tripImage = tripModel.image {
+      tripImageView.alpha = 0.3
+      tripImageView.image = tripImage
+      
+      UIView.animate(withDuration: 1) {
+        self.tripImageView.alpha = 1
+      }
+    }
   }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
