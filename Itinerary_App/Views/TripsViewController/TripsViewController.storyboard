@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oS3-HW-i3S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oS3-HW-i3S">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -73,10 +74,57 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="tAW-7g-2In" id="NbR-7n-uv1"/>
+                        <outlet property="helpView" destination="QZ7-Mg-suG" id="RCb-DU-6Gy"/>
                         <outlet property="tableView" destination="8hn-PT-Hev" id="dsA-gL-FnU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEY-Tp-Cos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="QZ7-Mg-suG">
+                    <rect key="frame" x="0.0" y="0.0" width="378" height="588"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="r51-E6-OxJ">
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="588"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsB-V7-uIa" customClass="AppUIButton" customModule="Itinerary_App" customModuleProvider="target">
+                                <rect key="frame" x="18" y="508" width="342" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2RA-s6-PVx"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeHelpView:" destination="oS3-HW-i3S" eventType="touchUpInside" id="rto-jM-YRk"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Kgt-kn-HAn">
+                                <rect key="frame" x="18" y="40" width="342" height="412.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe rows for more features" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPc-1j-WEs">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="XcS-gt-SB4">
+                                        <rect key="frame" x="0.0" y="40.5" width="342" height="184"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="Qp0-KA-6wt">
+                                        <rect key="frame" x="0.0" y="232.5" width="342" height="180"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Kgt-kn-HAn" firstAttribute="leading" secondItem="r51-E6-OxJ" secondAttribute="leading" constant="18" id="2ol-hb-iFl"/>
+                            <constraint firstItem="EsB-V7-uIa" firstAttribute="leading" secondItem="r51-E6-OxJ" secondAttribute="leading" constant="18" id="GCj-7Q-vBp"/>
+                            <constraint firstItem="Kgt-kn-HAn" firstAttribute="top" secondItem="r51-E6-OxJ" secondAttribute="top" constant="40" id="Pvg-az-f6h"/>
+                            <constraint firstAttribute="bottom" secondItem="EsB-V7-uIa" secondAttribute="bottom" constant="40" id="URA-hK-qyF"/>
+                            <constraint firstAttribute="trailing" secondItem="Kgt-kn-HAn" secondAttribute="trailing" constant="18" id="gKv-lP-Fes"/>
+                            <constraint firstAttribute="trailing" secondItem="EsB-V7-uIa" secondAttribute="trailing" constant="18" id="iLE-FT-QFY"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="125.89285714285714"/>
         </scene>
@@ -90,6 +138,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="deleteSwipe" width="422" height="184"/>
+        <image name="editSwipe" width="422" height="180"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Tint">
             <color red="1" green="0.24300000071525574" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
