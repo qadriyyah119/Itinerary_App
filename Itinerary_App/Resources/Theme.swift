@@ -11,7 +11,8 @@ import UIKit
 class Theme {
   static let mainFontName = "FugazOne-Regular"
   static let bodyFontName = "AvenirNext-Regular"
-  static let bodyFontFameBold = "AvenirNext-Bold"
+  static let bodyFontNameBold = "AvenirNext-Bold"
+  static let bodyFontNameDemiBold = "AvenirNext-DemiBold"
   static let accent = UIColor(named: "Accent")
   static let background = UIColor(named: "Background")
   static let tint = UIColor(named: "Tint")

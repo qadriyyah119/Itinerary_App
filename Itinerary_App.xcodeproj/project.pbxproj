@@ -14,6 +14,7 @@
 		1842FA0C24C0FE88001C79AA /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA0B24C0FE88001C79AA /* ActivitiesViewController.swift */; };
 		1842FA0E24C0FF23001C79AA /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1842FA0D24C0FF23001C79AA /* ActivitiesViewController.storyboard */; };
 		1842FA1024C77362001C79AA /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA0F24C77362001C79AA /* HeaderTableViewCell.swift */; };
+		1842FA1224C78575001C79AA /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1124C78575001C79AA /* ActivityTableViewCell.swift */; };
 		189DEDB1244DF68D00791165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DEDB0244DF68D00791165 /* AppDelegate.swift */; };
 		189DEDB3244DF68D00791165 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DEDB2244DF68D00791165 /* SceneDelegate.swift */; };
 		189DEDBA244DF6B800791165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189DEDB9244DF6B800791165 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		1842FA0B24C0FE88001C79AA /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		1842FA0D24C0FF23001C79AA /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
 		1842FA0F24C77362001C79AA /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1842FA1124C78575001C79AA /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		189DEDAD244DF68D00791165 /* Itinerary_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189DEDB0244DF68D00791165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189DEDB2244DF68D00791165 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				1842FA0B24C0FE88001C79AA /* ActivitiesViewController.swift */,
 				1842FA0D24C0FF23001C79AA /* ActivitiesViewController.storyboard */,
 				1842FA0F24C77362001C79AA /* HeaderTableViewCell.swift */,
+				1842FA1124C78575001C79AA /* ActivityTableViewCell.swift */,
 			);
 			path = ActivitiesViewController;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			files = (
 				189DEDD9244F5F6100791165 /* Theme.swift in Sources */,
 				189DEDDF244F785100791165 /* UIButtonExtension.swift in Sources */,
+				1842FA1224C78575001C79AA /* ActivityTableViewCell.swift in Sources */,
 				1842FA1024C77362001C79AA /* HeaderTableViewCell.swift in Sources */,
 				1842FA0224C0F093001C79AA /* DayModel.swift in Sources */,
 				1842FA0924C0F4CD001C79AA /* MockData.swift in Sources */,
