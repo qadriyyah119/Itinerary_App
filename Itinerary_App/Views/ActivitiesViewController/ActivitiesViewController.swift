@@ -15,11 +15,14 @@ class ActivitiesViewController: UIViewController {
   @IBOutlet weak var backgroundImageView: UIImageView!
   
   var tripId: UUID!
+  var tripTitle = ""
   var tripModel: TripModel?
   var sectionHeaderHeight: CGFloat = 0.0
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    title = tripTitle
     
     tableView.dataSource = self
     tableView.delegate = self
@@ -29,7 +32,6 @@ class ActivitiesViewController: UIViewController {
       self.tripModel = model
       
       guard let model = model else { return }
-      self.title = model.title
       self.backgroundImageView.image = model.image
       self.tableView.reloadData()
     }
@@ -67,8 +69,8 @@ extension ActivitiesViewController: UITableViewDataSource, UITableViewDelegate {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    var model = tripModel?.dayModels[indexPath.section].activityModels[indexPath.row]
-    var cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ActivityTableViewCell
+    let model = tripModel?.dayModels[indexPath.section].activityModels[indexPath.row]
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ActivityTableViewCell
     
     cell.setup(model: model!)
 
