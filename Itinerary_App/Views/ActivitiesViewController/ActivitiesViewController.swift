@@ -13,6 +13,7 @@ class ActivitiesViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var backgroundImageView: UIImageView!
+  @IBOutlet weak var addButton: AppUIButton!
   
   var tripId: UUID!
   var tripTitle = ""
@@ -23,6 +24,7 @@ class ActivitiesViewController: UIViewController {
     super.viewDidLoad()
     
     title = tripTitle
+    addButton.createFloatingActionButton()
     
     tableView.dataSource = self
     tableView.delegate = self
@@ -42,6 +44,26 @@ class ActivitiesViewController: UIViewController {
   @IBAction func back(_ sender: UIButton) {
     navigationController?.popViewController(animated: true)
   }
+  
+  @IBAction func addAction(_ sender: AppUIButton) {
+    let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
+    let dayAction = UIAlertAction(title: "Day", style: .default) { (action) in
+      print("Add new day")
+    }
+    let activityAction = UIAlertAction(title: "Activity", style: .default) { (action) in
+      print("Add new activity")
+    }
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+    
+    alert.addAction(dayAction)
+    alert.addAction(activityAction)
+    alert.addAction(cancelAction)
+    alert.view.tintColor = Theme.accent
+    
+    present(alert, animated: true)
+    
+  }
+  
 }
 
 extension ActivitiesViewController: UITableViewDataSource, UITableViewDelegate {

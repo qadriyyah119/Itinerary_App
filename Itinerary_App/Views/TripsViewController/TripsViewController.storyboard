@@ -58,10 +58,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAW-7g-2In">
-                                <rect key="frame" x="336" y="714" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAW-7g-2In">
+                                <rect key="frame" x="338" y="718" width="56" height="56"/>
                                 <color key="backgroundColor" name="Tint"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="ME3-BP-e5l"/>
+                                    <constraint firstAttribute="width" constant="56" id="OtQ-SM-CH3"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="plus" catalog="system"/>
                                 <connections>
@@ -70,6 +73,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lgi-0w-EPc" firstAttribute="bottom" secondItem="tAW-7g-2In" secondAttribute="bottom" id="Uek-sh-wSm"/>
+                            <constraint firstItem="Lgi-0w-EPc" firstAttribute="trailing" secondItem="tAW-7g-2In" secondAttribute="trailing" constant="20" id="mMm-89-hGv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lgi-0w-EPc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Trips" id="r56-aM-fNJ"/>

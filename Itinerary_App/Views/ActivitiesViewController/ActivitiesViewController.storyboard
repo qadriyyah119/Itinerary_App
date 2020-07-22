@@ -127,9 +127,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzN-v4-beC" customClass="AppUIButton" customModule="Itinerary_App" customModuleProvider="target">
+                                <rect key="frame" x="338" y="806" width="56" height="56"/>
+                                <color key="backgroundColor" name="Tint"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="5q0-Pb-Cpe"/>
+                                    <constraint firstAttribute="width" constant="56" id="gBP-4i-c9b"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addAction:" destination="78s-oY-OsE" eventType="touchUpInside" id="254-o5-Dvz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="R66-u5-1Rb" firstAttribute="trailing" secondItem="jzN-v4-beC" secondAttribute="trailing" constant="20" id="0H6-Y2-XRs"/>
+                            <constraint firstItem="R66-u5-1Rb" firstAttribute="bottom" secondItem="jzN-v4-beC" secondAttribute="bottom" id="9Ky-EM-aeS"/>
                             <constraint firstItem="06h-Lt-D1S" firstAttribute="trailing" secondItem="7Ys-t1-476" secondAttribute="trailing" id="EHP-qx-Lhp"/>
                             <constraint firstItem="06h-Lt-D1S" firstAttribute="top" secondItem="7Ys-t1-476" secondAttribute="top" id="Ggh-mO-tZk"/>
                             <constraint firstItem="06h-Lt-D1S" firstAttribute="leading" secondItem="7Ys-t1-476" secondAttribute="leading" id="Gsq-dZ-Cyi"/>
@@ -142,6 +157,7 @@
                         <viewLayoutGuide key="safeArea" id="R66-u5-1Rb"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="jzN-v4-beC" id="AJX-M9-ljU"/>
                         <outlet property="backgroundImageView" destination="06h-Lt-D1S" id="Jms-yP-Iin"/>
                         <outlet property="tableView" destination="JtG-i9-e4o" id="duz-UP-xIo"/>
                     </connections>
@@ -153,6 +169,7 @@
     </scenes>
     <color key="tintColor" name="Tint"/>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Accent">
             <color red="0.0" green="0.18431372549019609" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
