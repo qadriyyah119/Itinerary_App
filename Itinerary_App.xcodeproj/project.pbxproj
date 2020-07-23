@@ -19,6 +19,7 @@
 		1842FA1724CA1447001C79AA /* AddDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1624CA1447001C79AA /* AddDayViewController.swift */; };
 		1842FA1924CA2014001C79AA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1824CA2014001C79AA /* UIViewControllerExtension.swift */; };
 		1842FA1B24CA27FA001C79AA /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1A24CA27FA001C79AA /* UITextFieldExtension.swift */; };
+		1842FA1D24CA4095001C79AA /* DayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1C24CA4095001C79AA /* DayFunctions.swift */; };
 		189DEDB1244DF68D00791165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DEDB0244DF68D00791165 /* AppDelegate.swift */; };
 		189DEDB3244DF68D00791165 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DEDB2244DF68D00791165 /* SceneDelegate.swift */; };
 		189DEDBA244DF6B800791165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189DEDB9244DF6B800791165 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		1842FA1624CA1447001C79AA /* AddDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
 		1842FA1824CA2014001C79AA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1842FA1A24CA27FA001C79AA /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		1842FA1C24CA4095001C79AA /* DayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFunctions.swift; sourceTree = "<group>"; };
 		189DEDAD244DF68D00791165 /* Itinerary_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189DEDB0244DF68D00791165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189DEDB2244DF68D00791165 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				1842FA0124C0F093001C79AA /* DayModel.swift */,
+				1842FA1C24CA4095001C79AA /* DayFunctions.swift */,
 			);
 			path = Day;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				189DEDE4244F87C100791165 /* AddTripViewController.swift in Sources */,
 				189DEDC9244E3D5F00791165 /* TripFunctions.swift in Sources */,
 				189DEDD3244F4DE800791165 /* TripsTableViewCell.swift in Sources */,
+				1842FA1D24CA4095001C79AA /* DayFunctions.swift in Sources */,
 				189DEDC7244E3D4800791165 /* TripModel.swift in Sources */,
 				1842FA1924CA2014001C79AA /* UIViewControllerExtension.swift in Sources */,
 				1842FA1724CA1447001C79AA /* AddDayViewController.swift in Sources */,
