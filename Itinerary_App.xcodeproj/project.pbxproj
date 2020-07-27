@@ -20,6 +20,7 @@
 		1842FA1924CA2014001C79AA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1824CA2014001C79AA /* UIViewControllerExtension.swift */; };
 		1842FA1B24CA27FA001C79AA /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1A24CA27FA001C79AA /* UITextFieldExtension.swift */; };
 		1842FA1D24CA4095001C79AA /* DayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1C24CA4095001C79AA /* DayFunctions.swift */; };
+		1842FA1F24CF44EA001C79AA /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1E24CF44EA001C79AA /* DateExtension.swift */; };
 		189DEDB1244DF68D00791165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DEDB0244DF68D00791165 /* AppDelegate.swift */; };
 		189DEDB3244DF68D00791165 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DEDB2244DF68D00791165 /* SceneDelegate.swift */; };
 		189DEDBA244DF6B800791165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189DEDB9244DF6B800791165 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		1842FA1824CA2014001C79AA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1842FA1A24CA27FA001C79AA /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		1842FA1C24CA4095001C79AA /* DayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFunctions.swift; sourceTree = "<group>"; };
+		1842FA1E24CF44EA001C79AA /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		189DEDAD244DF68D00791165 /* Itinerary_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189DEDB0244DF68D00791165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189DEDB2244DF68D00791165 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		189DEDD4244F560D00791165 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1842FA1E24CF44EA001C79AA /* DateExtension.swift */,
 				189DEDD5244F568300791165 /* UIViewExtensions.swift */,
 				189DEDDE244F785100791165 /* UIButtonExtension.swift */,
 				1842FA1824CA2014001C79AA /* UIViewControllerExtension.swift */,
@@ -328,6 +331,7 @@
 				1842FA0724C0F3C0001C79AA /* ActivityTypeEnum.swift in Sources */,
 				1842FA0524C0F287001C79AA /* ActivityModel.swift in Sources */,
 				189DEDD6244F568300791165 /* UIViewExtensions.swift in Sources */,
+				1842FA1F24CF44EA001C79AA /* DateExtension.swift in Sources */,
 				189DEDE7244F8E3700791165 /* PopupUIView.swift in Sources */,
 				1842FA1B24CA27FA001C79AA /* UITextFieldExtension.swift in Sources */,
 				189DEDE9244F92BE00791165 /* AppUIButton.swift in Sources */,
