@@ -52,10 +52,12 @@ class ActivitiesViewController: UIViewController {
   @IBAction func addAction(_ sender: AppUIButton) {
     let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
     let dayAction = UIAlertAction(title: "Day", style: .default, handler: handleAddDay)
-    let activityAction = UIAlertAction(title: "Activity", style: .default) { (action) in
-      print("Add new activity")
-    }
+    let activityAction = UIAlertAction(title: "Activity", style: .default, handler: handleAddActivity)
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+    
+    if tripModel?.dayModels.count == 0 {
+      activityAction.isEnabled = false
+    }
     
     alert.addAction(dayAction)
     alert.addAction(activityAction)
@@ -66,16 +68,38 @@ class ActivitiesViewController: UIViewController {
     
   }
   
-  func handleAddDay(action: UIAlertAction) {
-    let vc = AddDayViewController.getInstance() as! AddDayViewController
-    vc.tripIndex = Data.tripModels.firstIndex(where: { (tripModel) -> Bool in
+  fileprivate func getTripIndex() -> Array<TripModel>.Index? {
+    return Data.tripModels.firstIndex(where: { (tripModel) -> Bool in
       tripModel.id == tripId
     })
+  }
+  
+  func handleAddActivity(action: UIAlertAction) {
+    let vc = AddActivityViewController.getInstance() as! AddActivityViewController
+    vc.tripModel = tripModel
+    vc.tripIndex = getTripIndex()
+    vc.doneSaving = { [weak self] dayIndex, activityModel in
+      guard let self = self else { return }
+      self.tripModel?.dayModels[dayIndex].activityModels.append(activityModel)
+      
+      let row = (self.tripModel?.dayModels[dayIndex].activityModels.count)! - 1
+      let indexPath = IndexPath(row: row, section: dayIndex)
+      self.tableView.insertRows(at: [indexPath], with: .automatic)
+      
+    }
+    
+    present(vc, animated: true)
+  }
+  
+  func handleAddDay(action: UIAlertAction) {
+    let vc = AddDayViewController.getInstance() as! AddDayViewController
+    vc.tripModel = tripModel
+    vc.tripIndex = getTripIndex()
     vc.doneSaving = { [weak self] dayModel in
       guard let self = self else { return }
-      
-      let indexArray = [self.tripModel?.dayModels.count ?? 0]
       self.tripModel?.dayModels.append(dayModel)
+      let indexArray = [self.tripModel?.dayModels.firstIndex(of: dayModel) ?? 0 ]
+      
       self.tableView.insertSections(IndexSet(indexArray), with: UITableView.RowAnimation.automatic)
       
     }

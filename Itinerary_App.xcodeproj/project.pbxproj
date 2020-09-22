@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183F7A2D2519738B00B4F35C /* ActivityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F7A2C2519738A00B4F35C /* ActivityFunctions.swift */; };
 		1842FA0224C0F093001C79AA /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA0124C0F093001C79AA /* DayModel.swift */; };
 		1842FA0524C0F287001C79AA /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA0424C0F287001C79AA /* ActivityModel.swift */; };
 		1842FA0724C0F3C0001C79AA /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA0624C0F3C0001C79AA /* ActivityTypeEnum.swift */; };
@@ -21,6 +22,8 @@
 		1842FA1B24CA27FA001C79AA /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1A24CA27FA001C79AA /* UITextFieldExtension.swift */; };
 		1842FA1D24CA4095001C79AA /* DayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1C24CA4095001C79AA /* DayFunctions.swift */; };
 		1842FA1F24CF44EA001C79AA /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842FA1E24CF44EA001C79AA /* DateExtension.swift */; };
+		186FFC5525192E2F0080FC0C /* AddActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186FFC5425192E2F0080FC0C /* AddActivityViewController.storyboard */; };
+		186FFC57251931FE0080FC0C /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FFC56251931FE0080FC0C /* AddActivityViewController.swift */; };
 		189DEDB1244DF68D00791165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DEDB0244DF68D00791165 /* AppDelegate.swift */; };
 		189DEDB3244DF68D00791165 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DEDB2244DF68D00791165 /* SceneDelegate.swift */; };
 		189DEDBA244DF6B800791165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189DEDB9244DF6B800791165 /* Assets.xcassets */; };
@@ -43,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183F7A2C2519738A00B4F35C /* ActivityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFunctions.swift; sourceTree = "<group>"; };
 		1842FA0124C0F093001C79AA /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		1842FA0424C0F287001C79AA /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		1842FA0624C0F3C0001C79AA /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		1842FA1A24CA27FA001C79AA /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		1842FA1C24CA4095001C79AA /* DayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFunctions.swift; sourceTree = "<group>"; };
 		1842FA1E24CF44EA001C79AA /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		186FFC5425192E2F0080FC0C /* AddActivityViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddActivityViewController.storyboard; sourceTree = "<group>"; };
+		186FFC56251931FE0080FC0C /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		189DEDAD244DF68D00791165 /* Itinerary_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189DEDB0244DF68D00791165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189DEDB2244DF68D00791165 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 			children = (
 				1842FA0424C0F287001C79AA /* ActivityModel.swift */,
 				1842FA0624C0F3C0001C79AA /* ActivityTypeEnum.swift */,
+				183F7A2C2519738A00B4F35C /* ActivityFunctions.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -127,6 +134,15 @@
 				1842FA1624CA1447001C79AA /* AddDayViewController.swift */,
 			);
 			path = AddDayViewController;
+			sourceTree = "<group>";
+		};
+		186FFC5325192DB60080FC0C /* AddActivityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				186FFC5425192E2F0080FC0C /* AddActivityViewController.storyboard */,
+				186FFC56251931FE0080FC0C /* AddActivityViewController.swift */,
+			);
+			path = AddActivityViewController;
 			sourceTree = "<group>";
 		};
 		189DEDA4244DF68C00791165 = {
@@ -188,6 +204,7 @@
 				189DEDE2244F876000791165 /* AddTripViewController */,
 				1842FA0A24C0FD5E001C79AA /* ActivitiesViewController */,
 				1842FA1324CA1339001C79AA /* AddDayViewController */,
+				186FFC5325192DB60080FC0C /* AddActivityViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +324,7 @@
 				189DEDBD244DF6B800791165 /* LaunchScreen.storyboard in Resources */,
 				1842FA0E24C0FF23001C79AA /* ActivitiesViewController.storyboard in Resources */,
 				1842FA1524CA13ED001C79AA /* AddDayViewController.storyboard in Resources */,
+				186FFC5525192E2F0080FC0C /* AddActivityViewController.storyboard in Resources */,
 				189DEDD1244F37AF00791165 /* TripsViewController.storyboard in Resources */,
 				189DEDDB244F606000791165 /* FugazOne-Regular.ttf in Resources */,
 				189DEDBA244DF6B800791165 /* Assets.xcassets in Resources */,
@@ -333,6 +351,7 @@
 				189DEDD6244F568300791165 /* UIViewExtensions.swift in Sources */,
 				1842FA1F24CF44EA001C79AA /* DateExtension.swift in Sources */,
 				189DEDE7244F8E3700791165 /* PopupUIView.swift in Sources */,
+				183F7A2D2519738B00B4F35C /* ActivityFunctions.swift in Sources */,
 				1842FA1B24CA27FA001C79AA /* UITextFieldExtension.swift in Sources */,
 				189DEDE9244F92BE00791165 /* AppUIButton.swift in Sources */,
 				189DEDB3244DF68D00791165 /* SceneDelegate.swift in Sources */,
@@ -343,6 +362,7 @@
 				189DEDD3244F4DE800791165 /* TripsTableViewCell.swift in Sources */,
 				1842FA1D24CA4095001C79AA /* DayFunctions.swift in Sources */,
 				189DEDC7244E3D4800791165 /* TripModel.swift in Sources */,
+				186FFC57251931FE0080FC0C /* AddActivityViewController.swift in Sources */,
 				1842FA1924CA2014001C79AA /* UIViewControllerExtension.swift in Sources */,
 				1842FA1724CA1447001C79AA /* AddDayViewController.swift in Sources */,
 			);

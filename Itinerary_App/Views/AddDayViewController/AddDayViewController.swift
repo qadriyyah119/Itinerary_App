@@ -18,6 +18,7 @@ class AddDayViewController: UIViewController {
     
     var doneSaving: ((DayModel) -> ())?
     var tripIndex: Int!
+    var tripModel: TripModel!
     
       override func viewDidLoad() {
           super.viewDidLoad()
@@ -31,18 +32,30 @@ class AddDayViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: UIButton) {
+      if alreadyExists(datePicker.date) {
+        let alert = UIAlertController(title: "Day Already Exists", message: "Choose another date", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+        return
+      }
  
-//      guard titleTextField.hasValue, let newTitle = titleTextField.text else
-//      { return }
-      
       let dayModel = DayModel(title: datePicker.date, subtitle: subtitleTextField.text ?? "", data: nil)
-      DayFunctions.createDays(at: tripIndex, using: dayModel)
+      DayFunctions.createDay(at: tripIndex, using: dayModel)
       
       if let doneSaving = doneSaving {
         doneSaving(dayModel)
       }
       dismiss(animated: true)
     }
+  
+  func alreadyExists(_ date: Date) -> Bool {
+    if tripModel.dayModels.contains(where: { $0.title.mediumDate() == date.mediumDate() }) {
+      return true
+    }
+    
+    return false
+  }
 
   @IBAction func done(_ sender: UITextField) {
     sender.resignFirstResponder()

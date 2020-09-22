@@ -24,3 +24,14 @@ struct DayModel {
     }
   }
 }
+
+// another way to sort the dates on DatePicker. Used on TripModel in didSet observer
+extension DayModel: Comparable {
+  static func < (lhs: DayModel, rhs: DayModel) -> Bool {
+    return lhs.title < rhs.title
+  }
+  
+  static func == (lhs: DayModel, rhs: DayModel) -> Bool {
+    return lhs.id == rhs.id
+  }
+}
